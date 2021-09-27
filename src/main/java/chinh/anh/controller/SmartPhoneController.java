@@ -26,7 +26,7 @@ ISmartPhoneService smartPhoneService;
             return new ResponseEntity<>(new ResponseMessage("no_producer"),HttpStatus.OK);
         }
         smartPhoneService.save(smartPhone);
-        return new ResponseEntity<>(new ResponseMessage("create_success"), HttpStatus.OK);
+        return new ResponseEntity<>(new ResponseMessage("create_success!"), HttpStatus.OK);
     }
     @GetMapping
     public ResponseEntity<?> getListSmartPhone(){
@@ -74,7 +74,7 @@ ISmartPhoneService smartPhoneService;
         smartPhone1.get().setModel(smartPhone.getModel());
         smartPhone1.get().setPrice(smartPhone.getPrice());
         smartPhoneService.save(smartPhone1.get());
-        return new ResponseEntity<>(new ResponseMessage("update_success"), HttpStatus.OK);
+        return new ResponseEntity<>(new ResponseMessage("update_success!"), HttpStatus.OK);
     }
 
 }
